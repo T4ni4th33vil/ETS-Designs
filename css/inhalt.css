@@ -1,0 +1,63 @@
+/* ==========================================
+   ANORDNUNG DER INHALTE NEBENEINANDER
+   ========================================== */
+
+/* Zwingt die Inhaltsblöcke in eine horizontale Reihe */
+.content-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;        /* Abstand zwischen den einzelnen Blöcken */
+    width: 100%;
+}
+
+/* Die einzelnen Inhalts-Kästchen */
+.contentpiece {
+    flex: 1;            /* Jeder Block bekommt exakt gleich viel Platz */
+    background-color: rgba(0, 0, 0, 0.03); /* Ganz zarter Hintergrund zur Andeutung */
+    padding: 1.5rem;
+    border: 0.06rem solid rgb(220, 220, 220); /* Dünner, minimalistischer Rahmen */
+}
+
+/* Styling für die kleinen Überschriften in den Blöcken */
+.contentpiece h3 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: rgb(187, 187, 187);
+    /* Macht den Farbwechsel beim Hovern geschmeidig */
+    transition: color 0.3s ease; 
+}
+
+/* Styling für die Fließtexte in den Blöcken */
+.contentpiece p {
+    font-family: system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: rgb(187, 187, 187);
+    /* Macht den Farbwechsel beim Hovern geschmeidig */
+    transition: color 0.3s ease; 
+}
+
+/* OPTIONAL: Abstand zwischen den beiden großen Haupt-Containern */
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* Abstand zwischen "Projekte" und "Über Mich" */
+}
+
+
+/* ==========================================
+   HOVER-EFFEKTE FÜR DIE INHALTE
+   ========================================== */
+
+/* Wenn der Kasten direkt oder über den Link gehovert wird: Schrift wird schwarz */
+.container:hover .contentpiece h3,
+.container-link:hover .contentpiece h3,
+.container:hover .contentpiece p,
+.container-link:hover .contentpiece p {
+    color: #000000 !important;
+}
+
+

@@ -1,0 +1,80 @@
+/* Grundregeln für die gesamte Seite */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Lädt den sauberen, eckigen System-UI-Look */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+}
+
+/* Der Container um deinen Header */
+.site {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 2. HEADER-LAYOUT (BILD LINKS, TEXT RECHTS) */
+header {
+    display: flex;
+    flex-direction: row; /* Zwingt Bild und Text nebeneinander zu stehen */
+    align-items: center; /* Zentriert Bild und Text vertikal auf eine Höhe */
+    gap: 40px;           /* Abstand zwischen deinem Bild und dem Text */
+    width: 100%;
+    margin-bottom: 3rem; /* Abstand nach unten zur nächsten Überschrift */
+    padding-bottom: 2rem;
+    border-bottom: solid 0.1rem black;
+}
+
+/* STYLING FÜR DEIN PROFILBILD */
+.profile-pic {
+    width: 220px;        /* Breite des Bildes */
+    height: 220px;       /* Höhe des Bildes */
+    object-fit: cover;   /* Perfekter quadratischer Zuschnitt ohne Verzerrung */
+    border-radius: 0px;  /* Harte Kanten für den minimalistischen Block-Look */
+    flex-shrink: 0;      /* Verhindert, dass das Bild gestaucht wird */
+}
+
+/* TEXT-BOX NEBEN DEM BILD */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* DEINE RIESIGE BLOCK-ÜBERSCHRIFT */
+.header-text h1 {
+    /* Nutzt die wuchtige Futura/Trebuchet Kombination */
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 900;
+    
+    /* 6.5% der Bildschirmbreite -> leicht verkleinert, damit es neben dem Bild Platz hat */
+    font-size: 6.5vw; 
+    
+    /* Zwingt den Text in Großbuchstaben für den extremen Block-Look */
+    text-transform: uppercase;
+    
+    /* Presst die Buchstaben für das Block-Muster eng zusammen */
+    letter-spacing: -2px;
+    line-height: 0.9;
+    
+    width: 100%;
+    text-align: right;    /* Linksbündig ausgerichtet */
+    margin-bottom: 15px; /* Abstand zum Fließtext darunter */
+}
+
+/* DER SUBTEXT DARUNTER (KONTRAST) */
+.header-text p {
+    font-family: system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: #333333; /* Leichtes Anthrazit für edlen Minimalismus */
+    text-align: left;
+}

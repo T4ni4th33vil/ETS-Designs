@@ -1,0 +1,68 @@
+/* ==========================================
+   LINK-SCHUTZ FÜR DEN MINIMALISTISCHEN LOOK
+   ========================================== */
+.container-link {
+    text-decoration: none; /* Entfernt die blaue Unterstreichung */
+    color: inherit;        /* Verhindert, dass der Text blau gefärbt wird */
+    display: block;        /* Zwingt den Link, die volle Kastenbreite einzunehmen */
+    width: 100%;
+}
+
+/* ==========================================
+   1. RUHEZUSTAND: GRAUER CONTENT-KASTEN
+   ========================================== */
+.container {
+    background-color: #f4f4f4 !important; /* Clean-grauer Kasten im Standardzustand */
+    padding: 2rem;
+    
+    /* Dein definierter Basis-Schatten */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.20) !important; 
+    
+    /* Sorgt dafür, dass Schatten, Hintergrund und Schriftfarbe sanft einfaden */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important; 
+    cursor: pointer; /* Zeigt die Klick-Hand beim Drüberfahren an */
+}
+
+/* Die standardmäßig graue Block-Überschrift im Kasten */
+h2 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+    color: rgb(187, 187, 187); /* Standardmäßig dezentes Grau */
+    
+    /* Skaliert flüssig mit der Bildschirmbreite */
+    font-size: 5vw; 
+    
+    /* Zwingt den Text in massive Großbuchstaben */
+    text-transform: uppercase;
+    
+    /* Presst die Buchstaben für den echten Block-Look eng zusammen */
+    letter-spacing: -2px;
+    line-height: 0.9;
+    
+    width: 100%;
+    text-align: left;    /* Linksbündig ausgerichtet */
+    margin-bottom: 2rem; /* Abstand zum Fließtext darunter */
+    padding-bottom: 2rem;
+    
+    /* Macht auch den Farbwechsel der Schrift beim Hovern geschmeidig */
+    transition: color 0.3s ease; 
+}
+
+
+/* ==========================================
+   2. HOVER-ZUSTAND: SOWOHL FÜR LINK ALS AUCH DIREKT
+   ========================================== */
+/* Zwingt den Schatten und Hintergrund beim Hovern zu mutieren */
+.container:hover,
+.container-link:hover .container {
+    background-color: #ffffff !important; 
+    
+    /* Dein definierter stärkerer Schatten: dunkler (40%) und tiefer */
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.40) !important; 
+}
+
+/* Wenn gehovert wird, wird das h2 schwarz */
+.container:hover h2,
+.container-link:hover h2, h3 {
+    color: #000000 !important; 
+}
